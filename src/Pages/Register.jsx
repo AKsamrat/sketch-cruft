@@ -7,7 +7,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import app from '../firebase/firebase.config';
+import app from '../Firebase/Firebase.config';
 const auth = getAuth(app);
 
 const Register = () => {
