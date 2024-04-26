@@ -13,6 +13,7 @@ import AllArtAndCraft from './Pages/AllArtAndCraft';
 import AddCraft from './Pages/AddCraft';
 import Mycraft from './Pages/Mycraft';
 import { ToastContainer } from 'react-toastify';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,11 +39,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/addCraft',
-        element: <AddCraft></AddCraft>,
+        element: (
+          <PrivateRoute>
+            <AddCraft></AddCraft>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/myCraft',
-        element: <Mycraft></Mycraft>,
+        element: (
+          <PrivateRoute>
+            <Mycraft></Mycraft>
+          </PrivateRoute>
+        ),
       },
       // {
       //   path: '/contact',

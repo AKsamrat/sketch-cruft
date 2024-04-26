@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { useLocation, useNavigate } from 'react-router-dom';
 const AddCraft = () => {
   const { user } = useContext(AuthContext) || {};
+  const navigate = useNavigate();
+
   const handleAddCraft = event => {
     event.preventDefault();
     const form = event.target;
@@ -44,10 +47,11 @@ const AddCraft = () => {
         if (data.insertedId) {
           Swal.fire({
             title: 'success',
-            text: 'User Added Successfully',
+            text: 'Craft Added Successfully',
             icon: 'success',
             confirmButtonText: 'Cool',
           });
+          form.reset();
         }
       });
   };
@@ -139,11 +143,11 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Select option"
                 >
-                  <option value="Test" selected>
+                  <option value="yes" selected>
                     yes
                   </option>
-                  <option value="Test2" selected>
-                    no
+                  <option value="No" selected>
+                    No
                   </option>
                 </select>
               </div>
@@ -178,10 +182,10 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Select Status"
                 >
-                  <option value="Test" selected>
+                  <option value="In Stock" selected>
                     In Stock
                   </option>
-                  <option value="Test2" selected>
+                  <option value="Made To Order" selected>
                     Made To Order
                   </option>
                 </select>

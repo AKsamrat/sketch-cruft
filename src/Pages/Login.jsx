@@ -13,10 +13,10 @@ const Login = () => {
   // console.log(location);
   const handleSocialLogin = socialProvider => {
     socialProvider().then(result => {
-      // if (result.user) {
-      //   navigate('/');
-      // }
-      // navigate(from, { replace: true });
+      if (result.user) {
+        navigate('/');
+      }
+      navigate(from, { replace: true });
     });
   };
 

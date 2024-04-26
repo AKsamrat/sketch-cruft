@@ -150,7 +150,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
                     : 'hover:text-[#FF497C]'
                 }
               >
-                <span>Art & Craft</span>
+                <span> All Art & Craft</span>
               </NavLink>
             </li>
             <li>
