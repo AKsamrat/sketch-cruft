@@ -12,6 +12,7 @@ import AuthProvider from './Provider/AuthProvider.jsx';
 import AllArtAndCraft from './Pages/AllArtAndCraft';
 import AddCraft from './Pages/AddCraft';
 import Mycraft from './Pages/Mycraft';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -56,5 +57,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
+    <ToastContainer></ToastContainer>
   </React.StrictMode>
 );

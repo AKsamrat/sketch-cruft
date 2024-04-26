@@ -60,7 +60,7 @@ const Register = () => {
 
   return (
     <div className=" lg:pl-32">
-      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 text-[#AD8B00]">
+      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 text-[#AD8B00] my-12">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Register</h1>
           <p className="text-sm dark:text-gray-600">
