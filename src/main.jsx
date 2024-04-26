@@ -14,6 +14,7 @@ import AddCraft from './Pages/AddCraft';
 import Mycraft from './Pages/Mycraft';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import CraftDetails from './Pages/CraftDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Mycraft></Mycraft>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/craftDetails/:id',
+        element: (
+          <PrivateRoute>
+            <CraftDetails></CraftDetails>
           </PrivateRoute>
         ),
       },

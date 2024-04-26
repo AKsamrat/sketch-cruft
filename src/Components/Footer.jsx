@@ -3,7 +3,7 @@ import logo from '../assets/logo.png';
 const Footer = () => {
   return (
     <footer className="bg-white lg:grid lg:grid-cols-5  px-5 md:px-[50px] lg:px-[80px] ">
-      <div className="relative block h-32 lg:col-span-2 lg:h-full">
+      <div className="relative block h-32 lg:col-span-2 lg:h-[330px] mt-4">
         <img
           src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
           alt=""
@@ -11,9 +11,10 @@ const Footer = () => {
         />
       </div>
 
-      <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+      <div className="px-4 py-6 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
+            <img className="pr-6" src={logo} alt="" />
             <p>
               <span className="text-xs uppercase tracking-wide text-gray-500">
                 {' '}
@@ -22,13 +23,13 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
+                className="block text-lg font-medium text-gray-900 hover:opacity-75 sm:text-xl"
               >
                 +880-1683654865
               </a>
             </p>
 
-            <ul className="mt-8 space-y-1 text-sm text-gray-700">
+            <ul className="mt-2 space-y-1 text-sm text-gray-700">
               <li>Monday to Friday: 10am - 5pm</li>
               <li>Weekend: 10am - 3pm</li>
             </ul>
@@ -247,7 +248,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-100 pt-12">
+        <div className="mt-3 border-t border-gray-100 pt-12">
           <div className="sm:flex sm:items-center sm:justify-between">
             <ul className="flex flex-wrap gap-4 text-xs">
               <li>
@@ -281,7 +282,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <p className="mt-8 text-xs text-gray-500 sm:mt-0">
+            <p className="mt-4 text-xs text-gray-500 sm:mt-0">
               &copy; 2024. Skatch Craft. All rights reserved.
             </p>
           </div>

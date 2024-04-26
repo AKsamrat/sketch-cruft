@@ -6,9 +6,8 @@ import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = ({ setDarkMode, darkMode }) => {
   const navigate = useNavigate();
-  const [sideOpen, setSideOpen] = useState(false);
-  const [userOpen, setUserOpen] = useState(false);
-  const [theme, setTheam] = useState('light');
+
+  const [theme, setTheam] = useState(localStorage.getItem('theme') || 'light');
 
   const { user, logOut } = useContext(AuthContext) || {};
 
@@ -232,7 +231,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           >
             {user && (
               <img
-                className="w-12  rounded-full h-12 "
+                className="w-14  rounded-full h-10 ml-2 "
                 alt="profile pic"
                 src={user?.photoURL}
               />
