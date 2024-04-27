@@ -17,11 +17,21 @@ const AllArtAndCraft = () => {
           {/* head */}
           <thead>
             <tr className="*:text-xl font-bold">
-              <th>Item Name</th>
-              <th>Image</th>
-              <th>Sub Category</th>
-              <th>Price</th>
-              <th>Stock Status</th>
+              <th>
+                <div>Item Name</div>
+              </th>
+              <th>
+                <div className="hidden lg:flex">Image</div>
+              </th>
+              <th>
+                <div className="hidden lg:flex">Sub Category</div>
+              </th>
+              <th>
+                <div className="hidden lg:flex">Price</div>
+              </th>
+              <th>
+                <div className="hidden lg:flex">Stock Status</div>
+              </th>
               <th></th>
             </tr>
           </thead>
@@ -31,15 +41,21 @@ const AllArtAndCraft = () => {
                 <th>{craft.name}</th>
 
                 <th>
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
+                  <div className="avatar hidden lg:flex">
+                    <div className="mask mask-squircle w-12 h-12 ">
                       <img src={craft.photo} alt="" />
                     </div>
                   </div>
                 </th>
-                <td>{craft.subCategory}</td>
-                <td>$ {craft.price}</td>
-                <td>{craft.stockStatus}</td>
+                <td>
+                  <div className="hidden lg:flex">{craft.subCategory}</div>
+                </td>
+                <td>
+                  <div className="hidden lg:flex">$ {craft.price}</div>
+                </td>
+                <td>
+                  <div className="">{craft.stockStatus}</div>
+                </td>
                 <td>
                   <Link
                     to={`/craftDetails/${craft._id}`}

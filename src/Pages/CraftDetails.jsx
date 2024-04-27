@@ -11,7 +11,7 @@ const CraftDetails = () => {
       .then(data => setCrafts(data));
   }, []);
   return (
-    <div>
+    <div className="mb-10">
       <div className="hero min-h-screen mt-8 space-y-3">
         <div className="hero-content flex-col lg:flex-row text-left gap-12">
           <div className=" rounded-lg  bg-[#F3F3F3] p-6 lg:p-5 flex-1">
