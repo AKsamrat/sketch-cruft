@@ -16,6 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import CraftDetails from './Pages/CraftDetails.jsx';
 import UpdateCraft from './Pages/UpdateCraft.jsx';
+import FilterCategoryPage from './Pages/FilterCategoryPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: '/artAndCraft',
         element: <AllArtAndCraft></AllArtAndCraft>,
+      },
+      {
+        path: '/filterCategory/:id',
+        element: <FilterCategoryPage></FilterCategoryPage>,
+        loader: () => fetch('http://localhost:5000/allCraft'),
       },
       {
         path: '/addCraft',
@@ -70,8 +76,6 @@ const router = createBrowserRouter([
             <UpdateCraft></UpdateCraft>
           </PrivateRoute>
         ),
-        // loader: ({ params }) =>
-        //   fetch(`http://localhost:5000/craftUpdate/${params.id}`),
       },
       // {
       //   path: '/contact',

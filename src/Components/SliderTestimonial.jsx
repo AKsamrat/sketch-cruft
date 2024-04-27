@@ -36,6 +36,9 @@ export default function CarouselTestimonial() {
     <>
       {/*<!-- Component: Testimonial carousel --> */}
       <div className="glide-08 relative w-full px-5 md:px-[50px] lg:px-[160px] mx-auto overflow-hidden">
+        <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl  mt-6">
+          Testimonial
+        </h2>
         {/*    <!-- Slides --> */}
         <div data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 pb-12">

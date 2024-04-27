@@ -14,9 +14,9 @@ const CraftDetails = () => {
     <div className="mb-10">
       <div className="hero min-h-screen mt-8 space-y-3">
         <div className="hero-content flex-col lg:flex-row text-left gap-12">
-          <div className=" rounded-lg  bg-[#F3F3F3] p-6 lg:p-5 flex-1">
+          <div className=" rounded-lg  bg-[#F3F3F3] p-3 lg:p-5 w-[400px] lg:w-[800px] ">
             <img
-              className="h-[400px]  lg:h-[500px] w-[300px] lg:w-full"
+              className="h-[400px]  lg:h-[500px] w-full lg:w-full"
               src={crafts?.photo}
               alt=""
             />
