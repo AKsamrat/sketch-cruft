@@ -15,6 +15,7 @@ import Mycraft from './Pages/Mycraft';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import CraftDetails from './Pages/CraftDetails.jsx';
+import UpdateCraft from './Pages/UpdateCraft.jsx';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,16 @@ const router = createBrowserRouter([
             <CraftDetails></CraftDetails>
           </PrivateRoute>
         ),
+      },
+      {
+        path: '/craftsUpdate/:id',
+        element: (
+          <PrivateRoute>
+            <UpdateCraft></UpdateCraft>
+          </PrivateRoute>
+        ),
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/craftUpdate/${params.id}`),
       },
       // {
       //   path: '/contact',

@@ -1,12 +1,45 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Mycraft = () => {
   const { user } = useContext(AuthContext);
 
   const [crafts, setCrafts] = useState([]);
   const [displayData, setDisplayData] = useState([]);
+  // console.log(displayData);
+  const [control, setControl] = useState(false);
+  const handleDelete = id => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to Delete this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(result => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/craftDelete/${id}`, {
+          method: 'DELETE',
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: 'Deleted!',
+                text: 'Your Craft has been deleted.',
+                icon: 'success',
+              });
+              setControl(!control);
+            }
+          });
+      }
+    });
+  };
+
   const handleJobsFilter = filter => {
     if (filter === 'Yes') {
       setDisplayData([...crafts].filter(data => data.customization === 'Yes'));
@@ -18,8 +51,11 @@ const Mycraft = () => {
   useEffect(() => {
     fetch(`http://localhost:5000/myCraft/${user?.email}`)
       .then(res => res.json())
-      .then(data => setCrafts(data));
-  }, []);
+      .then(data => {
+        setCrafts(data);
+        setDisplayData(data);
+      });
+  }, [user, control]);
   return (
     <div className="my-10  px-5 md:px-[50px] lg:px-[80px] mx-auto ">
       <div className="flex justify-center items-center mb-4">
@@ -159,7 +195,7 @@ const Mycraft = () => {
                 <div className="flex justify-between items-center">
                   <Link
                     className="flex justify-between items-center"
-                    to={`/details/ ${craft?._id}`}
+                    to={`/craftsUpdate/${craft?._id}`}
                   >
                     <button
                       // data-aos="fade-right"
@@ -174,7 +210,7 @@ const Mycraft = () => {
                   </Link>
                   <Link
                     className="flex justify-between items-center"
-                    to={`/details/ ${craft?._id}`}
+                    onClick={() => handleDelete(craft?._id)}
                   >
                     <button
                       // data-aos="fade-right"
