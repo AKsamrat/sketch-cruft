@@ -15,7 +15,7 @@ const ProductCard = ({ craft }) => {
             <img
               // data-aos-duration="1000"
               // data-aos="flip-left"
-              className="w-[390px]  h-72 py-3 rounded-3xl p-2 overflow-hidden "
+              className="w-[390px]  h-64 py-3 rounded-3xl p-2 overflow-hidden "
               src={craft?.photo}
               alt="Shoes"
             />
@@ -24,7 +24,7 @@ const ProductCard = ({ craft }) => {
             </div>
           </figure>
           <div className=" ">
-            <div className="py-3">
+            <div className="py-2">
               <div
                 className="rating flex gap-2 overflow-hidden"
                 // data-aos="fade-left"
@@ -34,7 +34,7 @@ const ProductCard = ({ craft }) => {
                   <input
                     type="radio"
                     name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
+                    className="mask mask-star-2 bg-orange-400 "
                     checked
                   />
                 )}
@@ -75,20 +75,20 @@ const ProductCard = ({ craft }) => {
               </div>
             </div>
             <h2
-              className="card-title text-2xl font-bold pb-3 overflow-hidden"
+              className="card-title text-2xl font-bold pb-2 overflow-hidden"
               // data-aos="fade-left"
               // data-aos-duration="1000"
             >
               {craft?.name}
             </h2>
-            <h2 className="mb-3">
+            <h2 className="mb-2">
               {' '}
               <span className="font-bold  ">Customize</span> :{' '}
               {craft?.customization}
             </h2>
 
             <hr />
-            <div className="card-actions justify-between items-center my-4">
+            <div className="card-actions justify-between items-center my-2">
               <div
                 className="badge badge-outline overflow-hidden"
                 // data-aos="fade-right"
@@ -116,7 +116,7 @@ const ProductCard = ({ craft }) => {
                   // data-aos="fade-right"
                   // data-aos-duration="1000"
                   type="button"
-                  className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-gray-800 text-[#AD8B00] mt-4 "
+                  className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-[#FA8072] text-white mt-4 "
                 >
                   {' '}
                   View Details

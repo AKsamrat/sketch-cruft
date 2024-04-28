@@ -27,20 +27,19 @@ const Banner = () => {
             <div className="md:h-[500px] h-auto">
               <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                  <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
+                  <p className="font-semibold text-[#FA8072] mb-3 text-center md:text-left">
                     Hot Category
                   </p>
 
                   <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                    Discover the Future <br />
-                    of Electronics
+                    Discover the Landscape Painting
                   </p>
                   <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
-                    Stay ahead with the latest tech trends and innovations.
+                    Stay ahead with the latest Carft & Painting.
                   </p>
 
                   <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#ab3154]">
+                    <button className="bg-[#FA8072] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#FA8072]">
                       <span className="mr-3">
                         <i className="bx bx-hive"></i>
                       </span>
@@ -50,10 +49,10 @@ const Banner = () => {
                 </div>
 
                 {/* left */}
-                <div className="w-full md:max-h-[400px] h-[250px] flex-1 mb-10 md:mb-0">
+                <div className="w-full md:max-h-[400px] flex-1 mb-10 md:mb-0">
                   <img
-                    className="h-full object-cover w-full"
-                    // src={heroImg1}
+                    className="md:h-full h-[300px] object-cover w-full"
+                    src="https://i.ibb.co/7nCSdJY/misty-landscape.jpg"
                     alt=""
                   />
                 </div>
@@ -65,20 +64,19 @@ const Banner = () => {
             <div className="md:h-[500px] h-auto">
               <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                  <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
-                    Top Brands
+                  <p className="font-semibold text-[#FA8072] mb-3 text-center md:text-left">
+                    Hot Category
                   </p>
 
                   <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                    Your Trusted Source for <br />
-                    Quality Gadgets
+                    Explore Potrait Art <br />
                   </p>
                   <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
                     Explore a wide range of cutting-edge electronic devices
                   </p>
 
                   <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#ab3154]">
+                    <button className="bg-[#FA8072] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#f86f60]">
                       <span className="mr-3">
                         <i className="bx bx-hive"></i>
                       </span>
@@ -90,8 +88,8 @@ const Banner = () => {
                 {/* left */}
                 <div className="w-full md:max-h-[400px]  flex-1 mb-10 md:mb-0">
                   <img
-                    className="md:h-full h-[250px] object-cover w-full"
-                    // src={heroImg2}
+                    className="md:h-full h-[300px]  object-fill w-full"
+                    src="https://i.ibb.co/Ksy3yrf/potrait-elegant.jpg"
                     alt=""
                   />
                 </div>
@@ -103,22 +101,19 @@ const Banner = () => {
             <div className="md:h-[500px] h-auto">
               <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                  <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
-                    <span className="bg-[#FF497C] text-white mr-3 text-xl px-2 py-1 rounded-full">
-                      <i className="bx bxs-hot"></i>
-                    </span>
-                    Top Brands
+                  <p className="font-semibold text-[#FA8072] mb-3 text-center md:text-left">
+                    Top Category
                   </p>
 
                   <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
                     Shop Smart, Shop <br /> TechWonders
                   </p>
                   <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
-                    Find the perfect tech solutions for your lifestyle.
+                    Find the perfect Painting for your lifestyle.
                   </p>
 
                   <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#FF497C] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#ab3154]">
+                    <button className="bg-[#FA8072] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#f87061]">
                       <span className="mr-3">
                         <i className="bx bx-hive"></i>
                       </span>
@@ -128,10 +123,10 @@ const Banner = () => {
                 </div>
 
                 {/* left */}
-                <div className="w-full max-h-[400px] flex-1 mb-10 md:mb-0">
+                <div className="w-full md:max-h-[400px]  flex-1 mb-10 md:mb-0">
                   <img
-                    className="h-full object-cover w-full"
-                    // src={heroImg3}
+                    className="md:h-full h-[300px] object-cover w-full"
+                    src="https://i.ibb.co/2ScPN6n/oil-vibrant.webp"
                     alt=""
                   />
                 </div>

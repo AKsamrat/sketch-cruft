@@ -66,7 +66,7 @@ const AddCraft = () => {
         >
           <fieldset className="p-6 lg:p-20 rounded-md shadow-sm bg-[#F4F3F0]">
             <div className="py-2 ">
-              <p className="font-bold text-center text-2xl md:text-4xl">
+              <p className="font-bold text-center text-2xl md:text-4xl mb-4">
                 Add New Craft
               </p>
               <p className="text-xs text-center">
@@ -191,7 +191,7 @@ const AddCraft = () => {
                 </select>
               </div>
             </div>
-            <button className="btn btn-secondary mt-12 w-full font-bold">
+            <button className="btn bg-[#FA8072] mt-12 w-full font-bold text-xl text-white">
               Add Craft
             </button>
           </fieldset>

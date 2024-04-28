@@ -59,7 +59,7 @@ const AllArtAndCraft = () => {
                 <td>
                   <Link
                     to={`/craftDetails/${craft._id}`}
-                    className="btn btn-primary"
+                    className="btn  bg-[#FA8072] text-white"
                   >
                     {' '}
                     View Details

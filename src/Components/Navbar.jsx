@@ -231,7 +231,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           >
             {user && (
               <img
-                className="w-14  rounded-full h-10 ml-2 "
+                className="w-16  rounded-full h-10 mx-2 "
                 alt="profile pic"
                 src={user?.photoURL}
               />
@@ -240,7 +240,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
 
           {user ? (
             <Link
-              className="btn bg-[#AD8B00] text-white"
+              className="btn bg-[#FA8072] text-white"
               onClick={handleSignout}
             >
               SignOut
@@ -250,14 +250,14 @@ const Navbar = ({ setDarkMode, darkMode }) => {
               <Link
                 to={'/login'}
                 onClick=""
-                className="btn bg-[#AD8B00] text-white"
+                className="btn bg-[#9474B4] text-white"
               >
                 LogIn
               </Link>
               <Link
                 to={'/register'}
                 onClick=""
-                className="btn bg-[#AD8B00] text-white hidden md:flex"
+                className="btn bg-[#EE7C53] text-white hidden md:flex"
               >
                 Sign Up
               </Link>

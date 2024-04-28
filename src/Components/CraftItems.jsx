@@ -40,13 +40,13 @@ const CraftItems = () => {
         </div>
         {` ${cardNumber}` < 7 ? (
           <div onClick={handleShowAll} className="mt-10 flex justify-center">
-            <button className="text-white bg-[#FF497C] border-0 py-2 px-6 focus:outline-none hover:bg-[#ab3154] rounded font-semibold duration-200">
+            <button className="text-white bg-[#FA8072] border-0 py-2 px-6 focus:outline-none hover:bg-[#ab3154] rounded font-semibold duration-200">
               See All
             </button>
           </div>
         ) : (
           <div onClick={handleShowLess} className="mt-10 flex justify-center">
-            <button className="text-white bg-[#FF497C] border-0 py-2 px-6 focus:outline-none hover:bg-[#ab3154] rounded font-semibold duration-200">
+            <button className="text-white bg-[#FA8072] border-0 py-2 px-6 focus:outline-none hover:bg-[#ab3154] rounded font-semibold duration-200">
               Show Less
             </button>
           </div>

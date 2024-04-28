@@ -60,7 +60,7 @@ const Mycraft = () => {
     <div className="my-10  px-5 md:px-[50px] lg:px-[80px] mx-auto ">
       <div className="flex justify-center items-center mb-4">
         <details className="dropdown dropdown-hover">
-          <summary className="m-1 btn bg-[#23BE0A] text-white px-6  flex justify-center items-center ">
+          <summary className="m-1 btn bg-[#FA8072] text-white px-6  flex justify-center items-center ">
             <p>Sort By Customize </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +201,7 @@ const Mycraft = () => {
                       // data-aos="fade-right"
                       // data-aos-duration="1000"
                       type="button"
-                      className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-gray-800 text-[#AD8B00] mt-4 "
+                      className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-[#FCB7B0] text-white mt-4 "
                     >
                       {' '}
                       Update
@@ -216,7 +216,7 @@ const Mycraft = () => {
                       // data-aos="fade-right"
                       // data-aos-duration="1000"
                       type="button"
-                      className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-gray-800 text-[#AD8B00] mt-4 "
+                      className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-[#FA8072] text-white mt-4 "
                     >
                       {' '}
                       Delete
