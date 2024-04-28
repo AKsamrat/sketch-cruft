@@ -60,7 +60,7 @@ const Register = () => {
 
   return (
     <div className=" lg:pl-32">
-      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 text-[#AD8B00] my-12">
+      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 text-[#FA8072] my-12">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Register</h1>
           <p className="text-sm dark:text-gray-600">
@@ -150,7 +150,7 @@ const Register = () => {
             <div>
               <button
                 type="submit"
-                className="w-full px-8 py-3 font-semibold rounded-md bg-[#AD8B00] text-gray-50"
+                className="w-full px-8 py-3 font-semibold rounded-md bg-[#FA8072] text-gray-50"
               >
                 Register
               </button>
@@ -163,7 +163,7 @@ const Register = () => {
             to={'/login'}
             rel="noopener noreferrer"
             href="#"
-            className="hover:underline text-[#AD8B00] font-bold text-xl "
+            className="hover:underline text-[#FA8072] font-bold text-xl "
           >
             Sign In
           </Link>

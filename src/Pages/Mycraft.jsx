@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { FaPencilAlt } from 'react-icons/fa';
 import { RiDeleteBin6Line } from 'react-icons/ri';
+import { toast } from 'react-toastify';
 
 const Mycraft = () => {
   const { user } = useContext(AuthContext);
@@ -23,7 +24,7 @@ const Mycraft = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/craftDelete/${id}`, {
+        fetch(`https://craft-server-sandy.vercel.app/craftDelete/${id}`, {
           method: 'DELETE',
         })
           .then(res => res.json())
@@ -51,9 +52,10 @@ const Mycraft = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myCraft/${user?.email}`)
+    fetch(`https://craft-server-sandy.vercel.app/myCraft/${user?.email}`)
       .then(res => res.json())
       .then(data => {
+        toast(' My Craft  Data Loading');
         setCrafts(data);
         setDisplayData(data);
       });

@@ -34,7 +34,7 @@ const AddCraft = () => {
       userName,
     };
     console.log(newCraft);
-    fetch('http://localhost:5000/craft', {
+    fetch('https://craft-server-sandy.vercel.app/craft', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -94,12 +94,32 @@ const AddCraft = () => {
                 <label htmlFor="chef" className="text-lg">
                   Subcategory Name
                 </label>
-                <input
+                <select
                   name="subCategory"
+                  id="brand"
+                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-600 border-gray-300 py-3 pl-2 "
                   type="text"
-                  placeholder="Sub Category"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-600 border-gray-300 py-3 pl-2"
-                />
+                  placeholder="Select option"
+                >
+                  <option value="Landscape Painting" selected>
+                    Landscape Painting
+                  </option>
+                  <option value="Portrait Drawing" selected>
+                    Portrait Drawing
+                  </option>
+                  <option value="Watercolor Painting" selected>
+                    Watercolor Painting
+                  </option>
+                  <option value="Oil Painting" selected>
+                    Oil Painting
+                  </option>
+                  <option value="Charcoal Sketching" selected>
+                    Charcoal Sketching
+                  </option>
+                  <option value="Cartoon Drawing" selected>
+                    Cartoon Drawing
+                  </option>
+                </select>
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="email" className="text-lg">
@@ -143,8 +163,8 @@ const AddCraft = () => {
                   type="text"
                   placeholder="Select option"
                 >
-                  <option value="yes" selected>
-                    yes
+                  <option value="Yes" selected>
+                    Yes
                   </option>
                   <option value="No" selected>
                     No

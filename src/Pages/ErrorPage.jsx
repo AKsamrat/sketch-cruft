@@ -1,18 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
-// import groovyWalkAnimation from './groovyWalk.json';
+import groovyWalkAnimation from '../assets/react.json';
+import alert from '../assets/alert.json';
 
 const ErrorPage = () => {
   return (
     <div>
-      <section className="flex items-center h-full p-16 dark:bg-gray-50 dark:text-gray-800">
+      <section className="flex items-center h-full  dark:bg-gray-50 dark:text-gray-800">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-          <div className="max-w-md text-center">
+          <div className="max-w-4xl text-center">
             {/* <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-400">
               <span className="sr-only">Error</span>404
             </h2> */}
-            {/* <Lottie animationData={groovyWalkAnimation} loop={true} />; */}
+            <div className="grid grid-cols-2">
+              <p>
+                <Lottie animationData={groovyWalkAnimation} loop={true} /> ;
+              </p>
+              <div>
+                <Lottie animationData={alert} loop={true} />;
+              </div>
+            </div>
             <p className="text-2xl font-semibold md:text-3xl">
               Sorry, we couldn't find this page.
             </p>

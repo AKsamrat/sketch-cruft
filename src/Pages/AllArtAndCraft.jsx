@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AllArtAndCraft = () => {
   const [crafts, setCrafts] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/allCraft')
+    fetch('https://craft-server-sandy.vercel.app/allCraft')
       .then(res => res.json())
-      .then(data => setCrafts(data));
+      .then(data => {
+        setCrafts(data);
+        toast(' All & Craft Data Loading');
+      });
   }, []);
 
   return (

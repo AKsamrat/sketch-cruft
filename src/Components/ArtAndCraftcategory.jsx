@@ -4,7 +4,7 @@ import CategoryCard from './CategoryCard';
 const ArtAndCraftcategory = () => {
   const [crafts, setCrafts] = useState(null);
   useEffect(() => {
-    fetch('http://localhost:5000/artAndCraftCategory')
+    fetch('https://craft-server-sandy.vercel.app/artAndCraftCategory')
       .then(res => res.json())
       .then(data => setCrafts(data));
   }, []);

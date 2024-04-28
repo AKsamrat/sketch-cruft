@@ -4,6 +4,7 @@ import ProductCard from './ProductCard';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import { FaAngleDoubleUp } from 'react-icons/fa';
 import { Fade } from 'react-awesome-reveal';
+import { toast } from 'react-toastify';
 
 const CraftItems = () => {
   const [crafts, setCrafts] = useState(null);
@@ -18,9 +19,12 @@ const CraftItems = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/allCraft')
+    fetch('https://craft-server-sandy.vercel.app/allCraft')
       .then(res => res.json())
-      .then(data => setCrafts(data));
+      .then(data => {
+        toast(' Craft Item Data Loading');
+        setCrafts(data);
+      });
   }, []);
   return (
     <div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProductCard = ({ craft }) => {
   // console.log(craft);
   return (
-    <Fade direction="up" duration={1500}>
+    <Fade direction="up" duration={1000}>
       <div>
         <div
           className="card  shadow-xl border-2 border-slate-200 rounded-2xl p-4 h-full relative overflow-hidden"

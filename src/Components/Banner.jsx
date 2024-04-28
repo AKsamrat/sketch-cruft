@@ -41,7 +41,7 @@ const Banner = () => {
                   </p>
 
                   <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#FA8072] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#FA8072]">
+                    <button className="bg-[#FA8072] py-2 mt-20 px-3 rounded text-white font-semibold hover:bg-[#FA8072]">
                       <span className="mr-3">
                         <i className="bx bx-hive"></i>
                       </span>
@@ -69,9 +69,7 @@ const Banner = () => {
                   <p className="font-semibold text-[#FA8072] mb-3 text-center md:text-left">
                     Hot Category
                   </p>
-                  <Fade>
-                    <p>Explore Your favourite Landsacape Painting</p>
-                  </Fade>
+
                   <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
                     Explore Potrait Art <br /> & Painting
                   </p>
@@ -79,7 +77,7 @@ const Banner = () => {
                     Explore of your thinking portrait here
                   </p>
                   <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#FA8072] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#f86f60]">
+                    <button className="bg-[#FA8072] py-2 mt-20 px-3 rounded text-white font-semibold hover:bg-[#f86f60]">
                       <span className="mr-3">
                         <i className="bx bx-hive"></i>
                       </span>
@@ -116,7 +114,7 @@ const Banner = () => {
                   </p>
 
                   <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#FA8072] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#f87061]">
+                    <button className="bg-[#FA8072] py-2 mt-20 px-3 rounded text-white font-semibold hover:bg-[#f87061]">
                       <span className="mr-3">
                         <i className="bx bx-hive"></i>
                       </span>

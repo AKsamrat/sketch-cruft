@@ -6,7 +6,7 @@ const CraftDetails = () => {
   const [crafts, setCrafts] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleCraft/${id}`)
+    fetch(`https://craft-server-sandy.vercel.app/singleCraft/${id}`)
       .then(res => res.json())
       .then(data => setCrafts(data));
   }, []);

@@ -9,12 +9,12 @@ const FilterCategoryPage = () => {
   const [categoryData, setCategoryData] = useState(null);
   const [craftData, setCraftData] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/allCraft')
+    fetch('https://craft-server-sandy.vercel.app/allCraft')
       .then(res => res.json())
       .then(data => setCraftData(data));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/category/${id}`)
+    fetch(`https://craft-server-sandy.vercel.app/category/${id}`)
       .then(res => res.json())
       .then(data => setCategoryData(data));
   }, []);

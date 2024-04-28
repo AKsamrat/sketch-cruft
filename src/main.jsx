@@ -43,7 +43,6 @@ const router = createBrowserRouter([
       {
         path: '/filterCategory/:id',
         element: <FilterCategoryPage></FilterCategoryPage>,
-        loader: () => fetch('http://localhost:5000/allCraft'),
       },
       {
         path: '/addCraft',

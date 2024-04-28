@@ -14,6 +14,7 @@ const Login = () => {
   const handleSocialLogin = socialProvider => {
     socialProvider().then(result => {
       if (result.user) {
+        toast('Succesfully Login');
         navigate('/');
       }
       navigate(from, { replace: true });
@@ -46,7 +47,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50  text-[#AD8B00] my-12">
+      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50  text-[#FA8072] my-12">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign in</h1>
           <p className="text-sm text-gray-600">
@@ -102,7 +103,7 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="w-full px-8 py-3 font-semibold rounded-md bg-[#AD8B00] text-gray-50"
+                className="w-full px-8 py-3 font-semibold rounded-md bg-[#FA8072] text-gray-50"
               >
                 Sign in
               </button>
@@ -152,7 +153,7 @@ const Login = () => {
             to={'/register'}
             rel="noopener noreferrer"
             href="#"
-            className="hover:underline text-[#AD8B00] text-xl font-bold"
+            className="hover:underline text-[#FA8072] text-xl font-bold"
           >
             Sign up
           </Link>
