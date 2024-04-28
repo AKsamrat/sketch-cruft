@@ -1,10 +1,11 @@
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ craft }) => {
   // console.log(craft);
   return (
-    <div>
+    <Fade direction="up" duration={1500}>
       <div>
         <div
           className="card  shadow-xl border-2 border-slate-200 rounded-2xl p-4 h-full relative overflow-hidden"
@@ -26,14 +27,14 @@ const ProductCard = ({ craft }) => {
           <div className=" ">
             <div className="py-2">
               <div
-                className="rating flex gap-2 overflow-hidden"
+                className="rating flex gap-2 overflow-hidden  rating-sm"
                 // data-aos="fade-left"
                 // data-aos-duration="1000"
               >
                 {craft?.rating > 4 && (
                   <input
                     type="radio"
-                    name="rating-2"
+                    name="rating-7"
                     className="mask mask-star-2 bg-orange-400 "
                     checked
                   />
@@ -41,7 +42,7 @@ const ProductCard = ({ craft }) => {
                 {craft?.rating > 3 && (
                   <input
                     type="radio"
-                    name="rating-2"
+                    name="rating-7"
                     className="mask mask-star-2 bg-orange-400"
                     checked
                   />
@@ -49,7 +50,7 @@ const ProductCard = ({ craft }) => {
                 {craft?.rating > 2 && (
                   <input
                     type="radio"
-                    name="rating-2"
+                    name="rating-7"
                     className="mask mask-star-2 bg-orange-400"
                     checked
                   />
@@ -58,20 +59,20 @@ const ProductCard = ({ craft }) => {
                 {craft?.rating > 1 && (
                   <input
                     type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
+                    name="rating-7"
+                    className="mask mask-star-2 bg-orange-400 text-sm"
                     checked
                   />
                 )}
                 {craft?.rating > 0 && (
                   <input
                     type="radio"
-                    name="rating-2"
+                    name="rating-7"
                     className="mask mask-star-2 bg-orange-400"
                     checked
                   />
                 )}
-                {craft?.rating}
+                <span className="font-bold">{craft?.rating}</span>
               </div>
             </div>
             <h2
@@ -127,7 +128,7 @@ const ProductCard = ({ craft }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

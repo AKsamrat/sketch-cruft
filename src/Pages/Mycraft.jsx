@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { FaPencilAlt } from 'react-icons/fa';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
 const Mycraft = () => {
   const { user } = useContext(AuthContext);
@@ -201,10 +203,10 @@ const Mycraft = () => {
                       // data-aos="fade-right"
                       // data-aos-duration="1000"
                       type="button"
-                      className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-[#FCB7B0] text-white mt-4 "
+                      className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-[#e5948b] text-white mt-4 "
                     >
                       {' '}
-                      Update
+                      <FaPencilAlt />
                     </button>
                     {/* <p>{area}sft</p> */}
                   </Link>
@@ -219,7 +221,7 @@ const Mycraft = () => {
                       className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded bg-[#FA8072] text-white mt-4 "
                     >
                       {' '}
-                      Delete
+                      <RiDeleteBin6Line />
                     </button>
                     {/* <p>{area}sft</p> */}
                   </Link>

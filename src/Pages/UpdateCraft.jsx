@@ -211,7 +211,7 @@ const UpdateCraft = () => {
                 </select>
               </div>
             </div>
-            <button className="btn btn-secondary mt-12 w-full font-bold">
+            <button className="btn bg-[#FA8072] mt-12 w-full font-bold text-white text-lg">
               Update Craft
             </button>
           </fieldset>

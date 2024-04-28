@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Glide from '@glidejs/glide';
+import { Fade, Bounce } from 'react-awesome-reveal';
 
 export default function CarouselTestimonial() {
   useEffect(() => {
@@ -36,8 +37,10 @@ export default function CarouselTestimonial() {
     <>
       {/*<!-- Component: Testimonial carousel --> */}
       <div className="glide-08 relative w-full px-5 md:px-[50px] lg:px-[160px] mx-auto overflow-hidden">
-        <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl  mt-6">
-          Testimonial
+        <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl  mt-6 mb-3 border-l-4 border-emerald-300   ">
+          <Bounce>
+            <span className="pl-2"> Testimonial </span>
+          </Bounce>
         </h2>
         {/*    <!-- Slides --> */}
         <div data-glide-el="track">

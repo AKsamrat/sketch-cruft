@@ -1,10 +1,11 @@
 import React from 'react';
+import { Zoom } from 'react-awesome-reveal';
 import { Link, useParams } from 'react-router-dom';
 
 const CategoryCard = ({ craft }) => {
   return (
     <Link to={`/filterCategory/${craft?._id}`}>
-      <div className="">
+      <Zoom duration={1000}>
         <div className="w-full bg-white border shadow-lg rounded-xl p-6 dark:bg-[#1a2641d5]">
           <div className="flex flex-col ">
             <div className="relative h-62 w-full mb-3">
@@ -75,7 +76,7 @@ const CategoryCard = ({ craft }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Zoom>
     </Link>
   );
 };
