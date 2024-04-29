@@ -5,9 +5,10 @@ import Swal from 'sweetalert2';
 import { FaPencilAlt } from 'react-icons/fa';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { toast } from 'react-toastify';
+import Spinner from '../Components/Spinner';
 
 const Mycraft = () => {
-  const { user } = useContext(AuthContext);
+  const { user, loading, setLoading } = useContext(AuthContext);
 
   const [crafts, setCrafts] = useState([]);
   const [displayData, setDisplayData] = useState([]);
@@ -57,6 +58,7 @@ const Mycraft = () => {
       .then(data => {
         toast(' My Craft  Data Loading');
         setCrafts(data);
+        setLoading(false);
         setDisplayData(data);
       });
   }, [user, control]);
@@ -64,6 +66,7 @@ const Mycraft = () => {
     <div className="my-10  px-5 md:px-[50px] lg:px-[80px] mx-auto ">
       <div className="flex justify-center items-center mb-4">
         <details className="dropdown dropdown-hover">
+          {loading && <Spinner></Spinner>}
           <summary className="m-1 btn bg-[#FA8072] text-white px-6  flex justify-center items-center ">
             <p>Sort By Customize </p>
             <svg

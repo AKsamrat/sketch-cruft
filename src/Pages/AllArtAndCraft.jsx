@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../Provider/AuthProvider';
+import Spinner from '../Components/Spinner';
 
 const AllArtAndCraft = () => {
+  const { loading, setLoading } = useContext(AuthContext);
   const [crafts, setCrafts] = useState(null);
 
   useEffect(() => {
@@ -10,12 +13,14 @@ const AllArtAndCraft = () => {
       .then(res => res.json())
       .then(data => {
         setCrafts(data);
+        setLoading(false);
         toast(' All Art & Craft Data Loading');
       });
   }, []);
 
   return (
     <div>
+      {loading && <Spinner></Spinner>}
       <div className="overflow-x-auto my-10  md:px-[50px] lg:px-[80px]">
         <table className="table">
           {/* head */}

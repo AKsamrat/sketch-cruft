@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import { FaAngleDoubleUp } from 'react-icons/fa';
 import { Fade } from 'react-awesome-reveal';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../Provider/AuthProvider';
+import Spinner from './Spinner';
 
 const CraftItems = () => {
+  const { loading, setLoading } = useContext(AuthContext);
   const [crafts, setCrafts] = useState(null);
   const [cardNumber, setCardNumber] = useState(6);
   console.log(cardNumber);
@@ -24,6 +27,7 @@ const CraftItems = () => {
       .then(data => {
         toast(' Craft Item Data Loading');
         setCrafts(data);
+        setLoading(false);
       });
   }, []);
   return (
@@ -35,7 +39,7 @@ const CraftItems = () => {
         Here is all hot craft item which is dont show yet in <br /> market
         place. please find your craft make it in your own
       </p>
-
+      {loading && <Spinner></Spinner>}
       <div className="my-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-[50px] lg:px-[80px] mx-auto ">
           {crafts?.length > ` ${cardNumber}`

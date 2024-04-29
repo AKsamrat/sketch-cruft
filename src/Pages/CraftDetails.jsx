@@ -31,9 +31,9 @@ const CraftDetails = () => {
                 <span className="font-bold">Sub Category</span> :{' '}
                 {crafts?.subCategory}
               </p>
-              <p className="font-bold flex justify-center items-center">
+              <p className="font-bold flex justify-start items-center">
                 Review:
-                <div className="rating flex gap-2">
+                <div className="rating flex gap-2 *:font-sans">
                   {crafts?.rating > 4 && (
                     <input
                       type="radio"
@@ -104,7 +104,7 @@ const CraftDetails = () => {
                   {crafts?.stockStatus}
                 </span>
               </a>
-              <p className="text-4xl font-medium text-red-600">
+              <p className="text-4xl font-medium text-red-600 font-sans">
                 {' '}
                 ${crafts?.price}.00
               </p>

@@ -66,7 +66,7 @@ const Login = () => {
           action=""
           className="space-y-12"
         >
-          <div className="space-y-4">
+          <div className="space-y-4 *:font-semibold">
             <div>
               <label htmlFor="email" className="block mb-2 text-sm">
                 Email address

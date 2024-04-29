@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 const Footer = () => {
   return (
-    <footer className="bg-white lg:grid lg:grid-cols-5  px-5 md:px-[50px] lg:px-[80px] mt-10">
+    <footer className="bg-white lg:grid lg:grid-cols-5  px-5 md:px-[50px] lg:px-[80px] mt-6">
       <div className="relative block h-32 lg:col-span-2 lg:h-[330px] mt-4">
         <img
           src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
@@ -23,13 +23,13 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="block text-lg font-medium text-gray-900 hover:opacity-75 sm:text-xl"
+                className="block text-lg font-medium text-gray-900 hover:opacity-75 sm:text-xl font-sans"
               >
                 +880-1683654865
               </a>
             </p>
 
-            <ul className="mt-2 space-y-1 text-sm text-gray-700">
+            <ul className="mt-2 space-y-1 text-sm text-gray-700 font-sans">
               <li>Monday to Friday: 10am - 5pm</li>
               <li>Weekend: 10am - 3pm</li>
             </ul>

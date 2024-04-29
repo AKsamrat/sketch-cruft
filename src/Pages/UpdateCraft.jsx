@@ -67,7 +67,13 @@ const UpdateCraft = () => {
       });
   };
   return (
-    <div>
+    <div
+      className=" lg:pl-32 bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url('frame2.webp')`,
+        // opacity: 10,
+      }}
+    >
       <section className="p-6 bg-gray-100 text-gray-900">
         <form
           onSubmit={handleUpdateCraft}
@@ -75,9 +81,9 @@ const UpdateCraft = () => {
           action=""
           className="container  mx-auto "
         >
-          <fieldset className="p-6 lg:p-20 rounded-md shadow-sm bg-[#F4F3F0]">
+          <fieldset className="p-6 lg:p-20 rounded-md shadow-sm ">
             <div className="py-2 ">
-              <p className="font-bold text-center text-2xl md:text-4xl">
+              <p className="font-bold text-center text-2xl md:text-4xl text-[#FA8072]">
                 Update Craft
               </p>
               <p className="text-xs text-center">
@@ -231,7 +237,7 @@ const UpdateCraft = () => {
                 </select>
               </div>
             </div>
-            <button className="btn bg-[#FA8072] mt-12 w-full font-bold text-white text-lg">
+            <button className="btn bg-[#FA8072] mt-12 w-full font-bold text-white text-lg border-none">
               Update Craft
             </button>
           </fieldset>

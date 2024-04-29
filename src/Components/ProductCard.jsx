@@ -99,7 +99,7 @@ const ProductCard = ({ craft }) => {
               </div>
               <div className="flex items-center gap-2">
                 <p
-                  className="font-bold text-2xl text-orange-400 overflow-hidden"
+                  className="font-bold text-2xl text-orange-400 overflow-hidden font-sans"
                   // data-aos="fade-left"
                   // data-aos-duration="1000"
                 >

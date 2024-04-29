@@ -77,6 +77,7 @@ const AuthProvider = ({ children }) => {
     loading,
     setUser,
     setReload,
+    setLoading,
   };
 
   useEffect(() => {

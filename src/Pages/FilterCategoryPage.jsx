@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import ProductCard from '../Components/ProductCard';
+import { AuthContext } from '../Provider/AuthProvider';
+import Spinner from '../Components/Spinner';
 
 const FilterCategoryPage = () => {
+  const { loading, setLoading } = useContext(AuthContext);
   const { id } = useParams();
   // const { crafts } = useLoaderData();
 
@@ -11,12 +14,18 @@ const FilterCategoryPage = () => {
   useEffect(() => {
     fetch('https://craft-server-sandy.vercel.app/allCraft')
       .then(res => res.json())
-      .then(data => setCraftData(data));
+      .then(data => {
+        setLoading(false);
+        setCraftData(data);
+      });
   }, []);
   useEffect(() => {
     fetch(`https://craft-server-sandy.vercel.app/category/${id}`)
       .then(res => res.json())
-      .then(data => setCategoryData(data));
+      .then(data => {
+        setLoading(false);
+        setCategoryData(data);
+      });
   }, []);
 
   const categories = craftData.filter(
@@ -26,6 +35,7 @@ const FilterCategoryPage = () => {
   console.log(categories);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 px-5 md:px-[50px] lg:px-[80px] mx-auto">
+      {loading && <Spinner></Spinner>}
       {categories?.map(craft => (
         <div key={craft._id}>
           <div

@@ -47,9 +47,9 @@ const Register = () => {
       })
         .then(result => {
           toast('successfully register');
-          // if (result.user) {
-          //   navigate(from);
-          // }
+          if (result.user) {
+            navigate(from);
+          }
         })
         .catch(error => {
           toast('Email and Pass Problem');
@@ -78,9 +78,11 @@ const Register = () => {
           action=""
           className="space-y-12"
         >
-          <div className="space-y-4">
+          <div className="space-y-4 *:font-semibold">
             <div>
-              <label className="block mb-2 text-sm">Your Name</label>
+              <label className="block mb-2 text-sm font-semibold">
+                Your Name
+              </label>
               <input
                 {...register('name', { required: true })}
                 required

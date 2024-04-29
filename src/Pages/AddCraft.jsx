@@ -56,17 +56,23 @@ const AddCraft = () => {
       });
   };
   return (
-    <div>
-      <section className="p-6 bg-gray-100 text-gray-900">
+    <div
+      className=" lg:pl-32 bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url('frame2.webp')`,
+        // opacity: 10,
+      }}
+    >
+      <section className="p-6  text-gray-900">
         <form
           onSubmit={handleAddCraft}
           noValidate=""
           action=""
           className="container  mx-auto "
         >
-          <fieldset className="p-6 lg:p-20 rounded-md shadow-sm bg-[#F4F3F0]">
+          <fieldset className="p-6 lg:p-20 rounded-md shadow-sm ">
             <div className="py-2 ">
-              <p className="font-bold text-center text-2xl md:text-4xl mb-4">
+              <p className="font-bold text-center text-2xl md:text-4xl mb-4 text-[#FA8072]">
                 Add New Craft
               </p>
               <p className="text-xs text-center">
@@ -78,7 +84,7 @@ const AddCraft = () => {
                 here.
               </p>
             </div>
-            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 space-y-4">
+            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 space-y-4 *:font-semibold">
               <div className="col-span-full sm:col-span-3 mt-4">
                 <label htmlFor="name" className="text-lg">
                   Item Name
@@ -211,7 +217,7 @@ const AddCraft = () => {
                 </select>
               </div>
             </div>
-            <button className="btn bg-[#FA8072] mt-12 w-full font-bold text-xl text-white">
+            <button className="btn bg-[#FA8072] mt-12 w-full font-bold text-xl text-white border-none">
               Add Craft
             </button>
           </fieldset>
