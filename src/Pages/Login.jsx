@@ -4,6 +4,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import bgimage from '../assets/bgimage.webp';
 
 const Login = () => {
   const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
@@ -46,8 +47,14 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50  text-[#FA8072] my-12">
+    <div
+      style={{
+        backgroundImage: `url('frame2.webp')`,
+        // opacity: 10,
+      }}
+      className="bg-no-repeat bg-cover "
+    >
+      <div className="flex flex-col max-w-2xl p-6 rounded-md sm:p-10 lg:pl-20  text-[#FA8072] my-12 px-5 md:px-[50px] lg:px-[80px] mx-auto">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign in</h1>
           <p className="text-sm text-gray-600">

@@ -243,7 +243,7 @@ const Marketing = () => {
               <img
                 alt=""
                 className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500 border-2 border-[#FA8072]"
-                src="https://source.unsplash.com/100x100/?portrait?5"
+                src="https://source.unsplash.com/100x100/?portrait?2"
               />
               <div className="flex-1 my-4">
                 <p className="text-xl font-semibold leading-snug">Mery land</p>

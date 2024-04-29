@@ -250,7 +250,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
               <Link
                 to={'/login'}
                 onClick=""
-                className="btn bg-[#9474B4] text-white"
+                className="btn bg-[#1410188d] text-white"
               >
                 LogIn
               </Link>

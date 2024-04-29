@@ -10,13 +10,13 @@ const AllArtAndCraft = () => {
       .then(res => res.json())
       .then(data => {
         setCrafts(data);
-        toast(' All & Craft Data Loading');
+        toast(' All Art & Craft Data Loading');
       });
   }, []);
 
   return (
     <div>
-      <div className="overflow-x-auto my-10 px-5 md:px-[50px] lg:px-[80px]">
+      <div className="overflow-x-auto my-10  md:px-[50px] lg:px-[80px]">
         <table className="table">
           {/* head */}
           <thead>

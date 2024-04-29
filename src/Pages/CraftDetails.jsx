@@ -25,7 +25,7 @@ const CraftDetails = () => {
             <h1 className="text-3xl lg:text-5xl font-bold">{crafts?.name}</h1>
             <p className="py-6 "> {crafts?.description}</p>
             <hr />
-            <div className="flex justify-between items-center py-5">
+            <div className=" py-5">
               <p className="my-2">
                 {' '}
                 <span className="font-bold">Sub Category</span> :{' '}

@@ -59,8 +59,14 @@ const Register = () => {
   };
 
   return (
-    <div className=" lg:pl-32">
-      <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 text-[#FA8072] my-12">
+    <div
+      className=" lg:pl-32 bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url('frame2.webp')`,
+        // opacity: 10,
+      }}
+    >
+      <div className="flex flex-col max-w-2xl p-6 rounded-md sm:p-10  text-[#FA8072] my-12 px-5 md:px-[50px] lg:px-[80px] mx-auto">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Register</h1>
           <p className="text-sm dark:text-gray-600">
