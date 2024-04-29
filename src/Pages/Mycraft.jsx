@@ -56,7 +56,7 @@ const Mycraft = () => {
     fetch(`https://craft-server-sandy.vercel.app/myCraft/${user?.email}`)
       .then(res => res.json())
       .then(data => {
-        toast(' My Craft  Data Loading');
+        toast(' My Craft  Data Loaded');
         setCrafts(data);
         setLoading(false);
         setDisplayData(data);

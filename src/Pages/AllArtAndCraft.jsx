@@ -14,7 +14,7 @@ const AllArtAndCraft = () => {
       .then(data => {
         setCrafts(data);
         setLoading(false);
-        toast(' All Art & Craft Data Loading');
+        toast(' All Art & Craft Data Loaded');
       });
   }, []);
 

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 import { AuthContext } from '../Provider/AuthProvider';
 import Spinner from './Spinner';
+import { toast } from 'react-toastify';
 
 const ArtAndCraftcategory = () => {
   const { loading, setLoading } = useContext(AuthContext);
@@ -10,6 +11,7 @@ const ArtAndCraftcategory = () => {
     fetch('https://craft-server-sandy.vercel.app/artAndCraftCategory')
       .then(res => res.json())
       .then(data => {
+        toast(' Category data Loaded');
         setCrafts(data);
         setLoading(false);
       });

@@ -25,7 +25,7 @@ const CraftItems = () => {
     fetch('https://craft-server-sandy.vercel.app/allCraft')
       .then(res => res.json())
       .then(data => {
-        toast(' Craft Item Data Loading');
+        toast(' Craft Item Data Loaded');
         setCrafts(data);
         setLoading(false);
       });

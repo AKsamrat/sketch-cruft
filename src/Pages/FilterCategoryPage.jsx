@@ -32,7 +32,7 @@ const FilterCategoryPage = () => {
     data => data?.subCategory == categoryData?.subCategory
   );
 
-  console.log(categories);
+  // console.log(categories);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 px-5 md:px-[50px] lg:px-[80px] mx-auto">
       {loading && <Spinner></Spinner>}

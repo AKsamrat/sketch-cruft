@@ -40,21 +40,21 @@ const Register = () => {
     }
     setRegisterError('');
     setSuccess('');
-    createUser(email, password).then(result => {
-      updateProfile(auth.currentUser, {
-        displayName: data.name,
-        photoURL: data.photo,
-      })
-        .then(result => {
+    createUser(email, password)
+      .then(result => {
+        updateProfile(auth.currentUser, {
+          displayName: data.name,
+          photoURL: data.photo,
+        }).then(result => {
           toast('successfully register');
-          if (result.user) {
-            navigate(from);
-          }
-        })
-        .catch(error => {
-          toast('Email and Pass Problem');
+          navigate(from, { replace: true });
+          // if (result.user) {
+          // }
         });
-    });
+      })
+      .catch(error => {
+        toast('Email and Pass Problem');
+      });
     reset();
   };
 
